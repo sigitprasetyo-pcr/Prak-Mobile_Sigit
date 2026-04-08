@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.e("onCreate", "MainActivity dibuat pertama kali")
+        Log.e("onCreate", "MainActivity Dibuat Pertama kali")
 
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
