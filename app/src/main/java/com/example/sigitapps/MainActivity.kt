@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sigitapps.databinding.ActivityMainBinding
-import com.example.sigitapps.pertemuan_4.FourthActivity
+import com.example.sigitapps.pertemuan_5.FifthActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,12 +19,7 @@ class MainActivity : AppCompatActivity() {
         Log.e("onCreate", "MainActivity Dibuat Pertama kali")
 
         binding.btnToFourth.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
-            /*tambahkan bagian berikut*/
-            intent.putExtra("name", "Politeknik Caltex Riau")
-            intent.putExtra("from", "Rumbai")
-            intent.putExtra("age", 25)
-            
+            val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
         }
     }
