@@ -2,5 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-<color name="biru_tua">#080CBF</color>
+    <color name="biru_tua">#080CBF</color>
+
+    <color name="bg_dark">#0A0D1F</color>
+    <color name="card_dark">#151932</color>
+    <color name="accent_yellow">#FFD700</color>
+    <color name="btn_coral">#FF5733</color>
+    <color name="text_secondary">#8E8E93</color>
+    <color name="purple_logo">#4B1F7E</color>
 </resources>
