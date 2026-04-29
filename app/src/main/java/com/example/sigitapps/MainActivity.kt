@@ -4,11 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import com.example.sigitapps.Pertemuan_6.DuaFragment
-import com.example.sigitapps.Pertemuan_6.SatuFragment
-import com.example.sigitapps.Pertemuan_6.TigaFragment
+import com.example.sigitapps.Home.Pertemuan_7.SeventhActivity
 import com.example.sigitapps.databinding.ActivityMainBinding
+import com.example.sigitapps.Home.pertemuan_2.SecondActivity
+import com.example.sigitapps.Home.pertemuan_3.ThirdActivity
+import com.example.sigitapps.Home.pertemuan_4.FourthActivity
+import com.example.sigitapps.Home.pertemuan_5.FifthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -20,22 +21,31 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
-
-        // Menampilkan fragment pertama secara default
-        replaceFragment(SatuFragment())
-
-        // Setup event click untuk mengganti fragment
-        binding.btnFragment1.setOnClickListener {
-            replaceFragment(SatuFragment())
+        // Navigasi ke Pertemuan 2
+        binding.btnPertemuan2.setOnClickListener {
+            startActivity(Intent(this, SecondActivity::class.java))
         }
 
-        binding.btnFragment2.setOnClickListener {
-            replaceFragment(DuaFragment())
+        // Navigasi ke Pertemuan 3
+        binding.btnPertemuan3.setOnClickListener {
+            startActivity(Intent(this, ThirdActivity::class.java))
         }
 
-        binding.btnFragment3.setOnClickListener {
-            replaceFragment(TigaFragment())
+        // Navigasi ke Pertemuan 4
+        binding.btnPertemuan4.setOnClickListener {
+            val intent = Intent(this, FourthActivity::class.java)
+            intent.putExtra("name", "User Sigit")
+            startActivity(intent)
+        }
+
+        // Navigasi ke Pertemuan 5
+        binding.btnPertemuan5.setOnClickListener {
+            startActivity(Intent(this, FifthActivity::class.java))
+        }
+
+        // Navigasi ke Pertemuan 7
+        binding.btnPertemuan7.setOnClickListener {
+            startActivity(Intent(this, SeventhActivity::class.java))
         }
 
         // Fitur Logout
@@ -43,25 +53,14 @@ class MainActivity : AppCompatActivity() {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Logout")
                 .setMessage("Apakah Anda yakin ingin keluar?")
-                .setPositiveButton("Ya") { dialog, _ ->
-                    val editor = sharedPref.edit()
-                    editor.clear()
-                    editor.apply()
-
-                    val intent = Intent(this, AuthActivity::class.java)
-                    startActivity(intent)
+                .setPositiveButton("Ya") { _, _ ->
+                    val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
+                    sharedPref.edit().clear().apply()
+                    startActivity(Intent(this, AuthActivity::class.java))
                     finish()
-                    dialog.dismiss()
                 }
                 .setNegativeButton("Batal", null)
                 .show()
         }
-    }
-
-    private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainer.id, fragment)
-            .addToBackStack(null)
-            .commit()
     }
 }

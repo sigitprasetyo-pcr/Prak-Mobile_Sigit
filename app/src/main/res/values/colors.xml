@@ -2,12 +2,25 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="biru_tua">#080CBF</color>
 
-    <color name="bg_dark">#0A0D1F</color>
-    <color name="card_dark">#151932</color>
-    <color name="accent_yellow">#FFD700</color>
-    <color name="btn_coral">#FF5733</color>
-    <color name="text_secondary">#8E8E93</color>
-    <color name="purple_logo">#4B1F7E</color>
+    <!-- Aura HTML Design Colors -->
+    <color name="aura_background">#0b1326</color>
+    <color name="aura_on_surface">#dae2fd</color>
+    <color name="aura_on_surface_variant">#cbc3d7</color>
+    <color name="aura_primary">#d0bcff</color>
+    <color name="aura_primary_container">#a078ff</color>
+    <color name="aura_tertiary_container">#b175ec</color>
+
+    <!-- Blobs / Ambient -->
+    <color name="aura_blob_purple">#8B5CF6</color>
+    <color name="aura_blob_indigo">#3A2DC2</color>
+
+    <!-- Glass & Surface -->
+    <color name="aura_glass_card">#0DFFFFFF</color> <!-- 5% opacity -->
+    <color name="aura_glass_stroke">#1FFFFFFF</color> <!-- 12% opacity -->
+    <color name="aura_input_field">#33000000</color> <!-- 20% dark -->
+
+    <!-- Legacy Compatibility -->
+    <color name="purple_logo">#673AB7</color>
+    <color name="biru_tua">#080CBF</color>
 </resources>

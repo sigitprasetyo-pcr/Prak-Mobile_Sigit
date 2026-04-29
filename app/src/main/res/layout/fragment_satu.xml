@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Ini Fragment 1"
+        android:text="pergi ke pasar membeli ikan"
         android:textColor="#333333"
         android:textSize="48sp"
         android:textStyle="bold" />

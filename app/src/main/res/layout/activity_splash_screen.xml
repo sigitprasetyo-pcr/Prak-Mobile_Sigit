@@ -1,90 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_dark">
+    android:background="@color/aura_background"
+    tools:context=".SplashScreenActivity">
 
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Welcome to"
-        android:textColor="@color/white"
-        android:textSize="18sp"
+    <!-- Background Blobs -->
+    <View
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@android:drawable/presence_online"
+        android:backgroundTint="#1A8B5CF6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:translationX="100dp"
+        android:translationY="-100dp" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="24dp"
-        app:cardBackgroundColor="@color/purple_logo"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvWelcome">
-
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:src="@android:drawable/btn_star_big_on"
-            app:tint="@color/accent_yellow" />
-    </com.google.android.material.card.MaterialCardView>
-
-    <TextView
-        android:id="@+id/tvBrand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="YESWIN"
-        android:textColor="@color/accent_yellow"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardLogo" />
-
-    <TextView
-        android:id="@+id/tvSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Play games &amp; Win real money"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvBrand" />
-
-    <!-- Placeholder for Astronaut and Rocket Illustration -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@android:drawable/presence_online"
+        android:backgroundTint="#1AB175EC"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:translationX="-50dp"
+        android:translationY="50dp" />
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@android:drawable/ic_menu_send"
-            app:tint="@color/btn_coral" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="16dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-            app:tint="@color/white" />
+        <!-- Glass Card Logo -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardBackgroundColor="@color/aura_glass_white"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/aura_glass_stroke"
+            app:strokeWidth="1dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="@color/aura_primary" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-black"
+            android:letterSpacing="0.4"
+            android:text="AURA"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:letterSpacing="0.3"
+            android:text="EXPERIENCE LIGHT"
+            android:textColor="@color/aura_on_surface_variant"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Loading Bar -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:progress="45"
+            app:indicatorColor="@color/aura_primary"
+            app:trackColor="@color/aura_glass_white"
+            app:trackCornerRadius="8dp"
+            app:trackThickness="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.6"
+            android:text="Initializing core systems... 45%"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

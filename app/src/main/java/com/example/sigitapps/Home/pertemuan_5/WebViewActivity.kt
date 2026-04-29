@@ -1,6 +1,8 @@
-package com.example.sigitapps.pertemuan_5
+package com.example.sigitapps.Home.pertemuan_5
 
+import android.R
 import android.os.Bundle
+import android.view.MenuItem
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sigitapps.databinding.ActivityWebViewBinding
@@ -41,9 +43,9 @@ class WebViewActivity : AppCompatActivity() {
     }
 
     // Mengaktifkan tombol back pada toolbar
-    override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
+            R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
                 true
             }
