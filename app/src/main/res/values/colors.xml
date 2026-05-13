@@ -3,24 +3,23 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Aura HTML Design Colors -->
-    <color name="aura_background">#0b1326</color>
-    <color name="aura_on_surface">#dae2fd</color>
-    <color name="aura_on_surface_variant">#cbc3d7</color>
-    <color name="aura_primary">#d0bcff</color>
-    <color name="aura_primary_container">#a078ff</color>
-    <color name="aura_tertiary_container">#b175ec</color>
-
-    <!-- Blobs / Ambient -->
-    <color name="aura_blob_purple">#8B5CF6</color>
-    <color name="aura_blob_indigo">#3A2DC2</color>
-
-    <!-- Glass & Surface -->
-    <color name="aura_glass_card">#0DFFFFFF</color> <!-- 5% opacity -->
-    <color name="aura_glass_stroke">#1FFFFFFF</color> <!-- 12% opacity -->
-    <color name="aura_input_field">#33000000</color> <!-- 20% dark -->
+    <!-- Luxe Theme Colors (Plum & Gold) -->
+    <color name="luxe_background">#171216</color>
+    <color name="luxe_surface">#241E23</color>
+    <color name="luxe_gold">#E9C349</color>
+    <color name="luxe_gold_variant">#AF8D11</color>
+    <color name="luxe_lavender">#E5B9DE</color>
+    <color name="luxe_on_surface">#ECD0E6</color>
+    <color name="luxe_on_surface_variant">#D0C3CB</color>
+    <color name="luxe_outline">#4D444B</color>
 
     <!-- Legacy Compatibility -->
-    <color name="purple_logo">#673AB7</color>
-    <color name="biru_tua">#080CBF</color>
+    <color name="aura_background">#FFFFFF</color>
+    <color name="aura_primary">#6200EE</color>
+    <color name="aura_primary_container">#673AB7</color>
+    <color name="aura_glass_stroke">#D1D1D1</color>
+    <color name="aura_on_surface_variant">#757575</color>
+
+    <!-- UI Element Colors -->
+    <color name="card_dark">#212121</color>
 </resources>

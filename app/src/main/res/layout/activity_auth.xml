@@ -5,29 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/aura_background"
+    android:background="@color/white"
     tools:context=".AuthActivity">
-
-    <!-- Background Blobs -->
-    <View
-        android:layout_width="400dp"
-        android:layout_height="400dp"
-        android:background="@android:drawable/presence_online"
-        android:backgroundTint="#1A8B5CF6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:translationX="100dp"
-        android:translationY="-100dp" />
-
-    <View
-        android:layout_width="500dp"
-        android:layout_height="500dp"
-        android:background="@android:drawable/presence_online"
-        android:backgroundTint="#1A3A2DC2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:translationX="100dp"
-        android:translationY="150dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -48,25 +27,16 @@
                 android:fontFamily="sans-serif-black"
                 android:letterSpacing="0.4"
                 android:text="AURA"
-                android:textColor="@color/white"
+                android:textColor="@color/aura_primary_container"
                 android:textSize="40sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Experience digital luxury"
-                android:textColor="@color/aura_on_surface_variant"
-                android:textSize="14sp" />
-
-            <!-- Glass Card Login -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                app:cardBackgroundColor="@color/aura_glass_white"
+                app:cardBackgroundColor="#F5F5F5"
                 app:cardCornerRadius="32dp"
-                app:cardElevation="0dp"
+                app:cardElevation="2dp"
                 app:strokeColor="@color/aura_glass_stroke"
                 app:strokeWidth="1dp">
 
@@ -80,177 +50,71 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Welcome back"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="28sp"
                         android:textStyle="bold" />
 
-                    <LinearLayout
+                    <!-- Email/Phone Field -->
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="32dp"
-                        android:orientation="vertical">
+                        app:boxBackgroundColor="@color/white"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxStrokeWidth="1dp"
+                        app:hintEnabled="false"
+                        app:startIconDrawable="@android:drawable/ic_dialog_email"
+                        app:startIconTint="#757575">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:text="Email Address"
-                            android:textColor="@color/aura_on_surface_variant"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-
-                        <com.google.android.material.textfield.TextInputLayout
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPhone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            app:boxBackgroundColor="#1A000000"
-                            app:boxCornerRadiusBottomEnd="16dp"
-                            app:boxCornerRadiusBottomStart="16dp"
-                            app:boxCornerRadiusTopEnd="16dp"
-                            app:boxCornerRadiusTopStart="16dp"
-                            app:boxStrokeWidth="0dp"
-                            app:boxStrokeWidthFocused="0dp"
-                            app:hintEnabled="false"
-                            app:startIconDrawable="@android:drawable/ic_dialog_email"
-                            app:startIconTint="@color/aura_on_surface_variant">
+                            android:hint="Email or Phone"
+                            android:textColor="@color/black"
+                            android:textColorHint="#9E9E9E" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/etPhone"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="hello@aura.com"
-                                android:textColor="@color/white"
-                                android:textColorHint="#4DFFFFFF" />
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
+                    <!-- Password Field -->
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:orientation="vertical">
+                        app:boxBackgroundColor="@color/white"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxStrokeWidth="1dp"
+                        app:hintEnabled="false"
+                        app:passwordToggleEnabled="true"
+                        app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                        app:startIconTint="#757575">
 
-                        <RelativeLayout
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingHorizontal="4dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Password"
-                                android:textColor="@color/aura_on_surface_variant"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:text="Forgot Password?"
-                                android:textColor="@color/aura_primary"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-                        </RelativeLayout>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            app:boxBackgroundColor="#1A000000"
-                            app:boxCornerRadiusBottomEnd="16dp"
-                            app:boxCornerRadiusBottomStart="16dp"
-                            app:boxCornerRadiusTopEnd="16dp"
-                            app:boxCornerRadiusTopStart="16dp"
-                            app:boxStrokeWidth="0dp"
-                            app:boxStrokeWidthFocused="0dp"
-                            app:hintEnabled="false"
-                            app:passwordToggleEnabled="true"
-                            app:passwordToggleTint="@color/aura_on_surface_variant"
-                            app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
-                            app:startIconTint="@color/aura_on_surface_variant">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/etPassword"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="••••••••"
-                                android:inputType="textPassword"
-                                android:textColor="@color/white"
-                                android:textColorHint="#4DFFFFFF" />
-                        </com.google.android.material.textfield.TextInputLayout>
-                    </LinearLayout>
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textColor="@color/black"
+                            android:textColorHint="#9E9E9E" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnGetOtp"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="32dp"
-                        android:backgroundTint="@null"
-                        android:background="@drawable/bg_aura_btn"
                         android:text="Login"
                         android:textAllCaps="false"
                         android:textSize="20sp"
                         android:textStyle="bold"
+                        app:backgroundTint="@color/aura_primary_container"
                         app:cornerRadius="16dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="1dp"
-                            android:layout_weight="1"
-                            android:background="#1AFFFFFF" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="16dp"
-                            android:text="OR CONTINUE WITH"
-                            android:textColor="@color/aura_on_surface_variant"
-                            android:textSize="10sp"
-                            android:letterSpacing="0.1" />
-
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="1dp"
-                            android:layout_weight="1"
-                            android:background="#1AFFFFFF" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.button.MaterialButton
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="0dp"
-                            android:layout_height="54dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:text="Google"
-                            android:textColor="@color/white"
-                            app:cornerRadius="12dp"
-                            app:strokeColor="@color/aura_glass_stroke" />
-
-                        <com.google.android.material.button.MaterialButton
-                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                            android:layout_width="0dp"
-                            android:layout_height="54dp"
-                            android:layout_marginStart="8dp"
-                            android:layout_weight="1"
-                            android:text="Apple"
-                            android:textColor="@color/white"
-                            app:cornerRadius="12dp"
-                            app:strokeColor="@color/aura_glass_stroke" />
-                    </LinearLayout>
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -260,11 +124,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:layout_marginBottom="32dp"
                 android:text="Don't have an account? Sign Up"
                 android:textColor="@color/aura_on_surface_variant" />
 
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

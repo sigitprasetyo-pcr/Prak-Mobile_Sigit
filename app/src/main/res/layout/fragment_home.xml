@@ -7,11 +7,21 @@
     android:background="#FDF7FF"
     tools:context=".Home.HomeFragment">
 
+    <!-- Background Header Artistik -->
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_header_wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,7 +44,7 @@
                 android:id="@+id/tvWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="60dp"
                 android:text="Welcome!"
                 android:textColor="#4A4A4A"
                 android:textSize="32sp"
@@ -96,11 +106,22 @@
                 android:id="@+id/btnToSeventh"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="12dp"
                 android:text="Pertemuan 7"
                 android:textAllCaps="false"
                 android:textSize="14sp"
                 app:backgroundTint="#673AB7"
+                app:cornerRadius="32dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToNinth"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="32dp"
+                android:text="Pertemuan 9"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                app:backgroundTint="#4A148C"
                 app:cornerRadius="32dp" />
 
             <com.google.android.material.button.MaterialButton

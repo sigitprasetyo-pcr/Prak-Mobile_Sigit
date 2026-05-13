@@ -1,7 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.SigitApps" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <!-- Memaksa agar tetap menggunakan tema LIGHT meskipun HP dalam mode malam -->
+    <style name="Base.Theme.SigitApps" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/aura_primary_container</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/aura_primary_container</item>
     </style>
+
+    <style name="Theme.SigitApps" parent="Base.Theme.SigitApps" />
 </resources>

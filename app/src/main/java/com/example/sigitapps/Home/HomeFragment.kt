@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.sigitapps.AuthActivity
 import com.example.sigitapps.Home.Pertemuan_7.SeventhActivity
+import com.example.sigitapps.Home.Pertemuan_9.NinthActivity
 import com.example.sigitapps.Home.pertemuan_2.SecondActivity
 import com.example.sigitapps.Home.pertemuan_3.ThirdActivity
 import com.example.sigitapps.Home.pertemuan_4.FourthActivity
@@ -58,6 +59,10 @@ class HomeFragment : Fragment() {
 
         binding.btnToSeventh.setOnClickListener {
             startActivity(Intent(requireContext(), SeventhActivity::class.java))
+        }
+
+        binding.btnToNinth.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {

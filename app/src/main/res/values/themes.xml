@@ -1,11 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.SigitApps" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Aura Design Colors -->
+    <!-- Base application theme diubah ke Light agar tidak gelap -->
+    <style name="Base.Theme.SigitApps" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Warna Utama -->
         <item name="colorPrimary">@color/aura_primary_container</item>
-        <item name="colorSecondary">@color/aura_tertiary_container</item>
-        <item name="android:windowBackground">@color/aura_background</item>
-        <item name="android:statusBarColor">@color/aura_background</item>
+        <item name="colorPrimaryVariant">@color/aura_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Warna Latar Belakang -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/aura_primary_container</item>
     </style>
 
     <style name="Theme.SigitApps" parent="Base.Theme.SigitApps" />
