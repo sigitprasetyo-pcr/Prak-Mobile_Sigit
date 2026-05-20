@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.sigitapps.AuthActivity
+import com.example.sigitapps.Home.Pertemuan_10.TenthActivity
 import com.example.sigitapps.Home.Pertemuan_7.SeventhActivity
 import com.example.sigitapps.Home.Pertemuan_9.NinthActivity
 import com.example.sigitapps.Home.pertemuan_2.SecondActivity
@@ -63,6 +64,10 @@ class HomeFragment : Fragment() {
 
         binding.btnToNinth.setOnClickListener {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+
+        binding.btnToTenth.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {

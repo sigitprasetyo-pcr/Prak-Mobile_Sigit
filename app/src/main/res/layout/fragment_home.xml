@@ -7,134 +7,141 @@
     android:background="#FDF7FF"
     tools:context=".Home.HomeFragment">
 
-    <!-- Background Header Artistik -->
+    <!-- Background Header - Ditinggikan agar area ungu lebih luas -->
     <View
         android:id="@+id/background_header"
-        android:layout_width="0dp"
-        android:layout_height="220dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:background="@drawable/bg_header_wave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingTop="20dp"
         android:background="@android:color/transparent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@android:color/white"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="100dp">
 
             <TextView
                 android:id="@+id/tvWelcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="20dp"
                 android:text="Welcome!"
                 android:textColor="#4A4A4A"
-                android:textSize="32sp"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="25dp"
                 android:text="Silahkan pilih..."
                 android:textColor="#757575"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
+            <!-- Tombol Berurutan -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnToSecond"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
                 android:text="Pertemuan 2"
                 android:textAllCaps="false"
-                android:textSize="14sp"
                 app:backgroundTint="#673AB7"
-                app:cornerRadius="32dp" />
+                app:cornerRadius="28dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnToThird"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
                 android:text="Pertemuan 3"
                 android:textAllCaps="false"
-                android:textSize="14sp"
                 app:backgroundTint="#000000"
-                app:cornerRadius="32dp" />
+                app:cornerRadius="28dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnToFourth"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
                 android:text="Pertemuan 4"
                 android:textAllCaps="false"
-                android:textSize="14sp"
                 app:backgroundTint="#757575"
-                app:cornerRadius="32dp" />
+                app:cornerRadius="28dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnToFifth"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
                 android:text="Pertemuan 5"
                 android:textAllCaps="false"
-                android:textSize="14sp"
                 app:backgroundTint="#4285F4"
-                app:cornerRadius="32dp" />
+                app:cornerRadius="28dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnToSeventh"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
                 android:text="Pertemuan 7"
                 android:textAllCaps="false"
-                android:textSize="14sp"
                 app:backgroundTint="#673AB7"
-                app:cornerRadius="32dp" />
+                app:cornerRadius="28dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnToNinth"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="32dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
                 android:text="Pertemuan 9"
                 android:textAllCaps="false"
-                android:textSize="14sp"
                 app:backgroundTint="#4A148C"
-                app:cornerRadius="32dp" />
+                app:cornerRadius="28dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToTenth"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="25dp"
+                android:text="Pertemuan 10"
+                android:textAllCaps="false"
+                app:backgroundTint="#3F51B5"
+                app:cornerRadius="28dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogout"
-                android:layout_width="180dp"
-                android:layout_height="56dp"
-                android:layout_marginBottom="24dp"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="40dp"
                 android:text="Logout"
                 android:textAllCaps="false"
-                android:textSize="16sp"
                 android:textStyle="bold"
                 app:backgroundTint="#D32F2F"
-                app:cornerRadius="28dp" />
+                app:cornerRadius="25dp" />
 
         </LinearLayout>
     </ScrollView>
