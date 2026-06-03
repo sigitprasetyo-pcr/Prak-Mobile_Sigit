@@ -22,4 +22,12 @@
 
     <!-- UI Element Colors -->
     <color name="card_dark">#212121</color>
+
+    <!-- Tutorial Background Colors -->
+    <color name="tutorial_bg_1">#64B5F6</color>
+    <color name="tutorial_bg_2">#AED581</color>
+    <color name="tutorial_bg_3">#4DB6AC</color>
+
+    <!-- Tutorial Indicator Colors -->
+    <color name="abu_gelap">#424242</color>
 </resources>

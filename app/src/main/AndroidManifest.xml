@@ -62,6 +62,10 @@
             android:name=".Home.Pertemuan_10.TenthActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".Message.tutorial.TutorialMessageActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

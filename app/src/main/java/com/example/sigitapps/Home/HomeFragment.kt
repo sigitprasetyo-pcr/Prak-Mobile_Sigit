@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sigitapps.AuthActivity
 import com.example.sigitapps.Home.Pertemuan_10.TenthActivity
 import com.example.sigitapps.Home.Pertemuan_7.SeventhActivity
@@ -16,8 +19,12 @@ import com.example.sigitapps.Home.pertemuan_2.SecondActivity
 import com.example.sigitapps.Home.pertemuan_3.ThirdActivity
 import com.example.sigitapps.Home.pertemuan_4.FourthActivity
 import com.example.sigitapps.Home.pertemuan_5.FifthActivity
+import com.example.sigitapps.Home.photo.PhotoAdapter
+import com.example.sigitapps.data.api.CatFactApiClient
+import com.example.sigitapps.data.api.PhotoApiClient
 import com.example.sigitapps.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -40,6 +47,16 @@ class HomeFragment : Fragment() {
             title = "Home"
         }
 
+        // Load Data
+        loadCatFact()
+        loadPhoto()
+
+        // Refresh Cat Fact
+        binding.btnRefresh.setOnClickListener {
+            loadCatFact()
+        }
+
+        // Navigation Buttons
         binding.btnToSecond.setOnClickListener {
             startActivity(Intent(requireContext(), SecondActivity::class.java))
         }
@@ -82,6 +99,37 @@ class HomeFragment : Fragment() {
                 }
                 .setNegativeButton("Batal", null)
                 .show()
+        }
+    }
+
+    private fun loadCatFact() {
+        binding.tvCatFact.text = "Loading cat fact..."
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
+        }
+    }
+
+    private fun loadPhoto() {
+        lifecycleScope.launch {
+            try {
+                val photos = PhotoApiClient.apiService.getPhotos()
+                val adapter = PhotoAdapter(photos)
+                binding.rvGallery.adapter = adapter
+                
+                // Set LayoutManager ke Vertical (LinearLayoutManager)
+                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext())
+                
+                // Opsional: Untuk Grid (2 kolom) gunakan kode di bawah:
+                // binding.rvGallery.layoutManager = GridLayoutManager(requireContext(), 2)
+                
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
